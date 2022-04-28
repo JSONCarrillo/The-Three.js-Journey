@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>My first three.js app</title>
+		<style>
+			body { margin: 0; }
+
+			.canvas-settings {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+
+			#set{
+				color: white; 
+				background-color: blue; 
+				border: none; 
+				padding: 10px 5px;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<section class="canvas-settings">
+		<canvas class="webgl"></canvas>
+			<p>Box size</p>
+			<div class="cube-inputs">
+				<label for="base">Base</label>
+				<input type="text" id="base" value="1">
+				<label for="height">Height</label>
+				<input type="text" id="height" value="1">
+				<label for="width">Width</label>
+				<input type="text" id="width" value="1">
+			</div>
+			<p>Camera</p>
+			<div class="camera-inputs">
+				<label for="x-axis">X-axis</label>
+				<input type="text" id="x-axis" value="0">
+				<label for="y-axis">Y-axis</label>
+				<input type="text" id="y-axis" value="0">
+				<label for="z-axis">Z-axis</label>
+				<input type="text" id="z-axis" value="3">
+			</div>
+			<br>
+			<div >
+				<button id="set" onclick="window.location.reload(false)">Set Scene</button>
+			</div>
+		</section>
+
+		<script src="./js/three.js"></script>
+		<script src="./app.js"></script>
+	</body>
+</html>
